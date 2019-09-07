@@ -1,0 +1,2 @@
+include ':app', ':bouncylayout'
+rootProject.name='BouncyLayout'
