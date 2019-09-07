@@ -23,7 +23,7 @@ class MainActivity : BaseStylesActivity() {
         setContentView(R.layout.activity_main)
 
         // recyclerView.layoutManager = GridLayoutManager(this, 3)
-        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, true)
+        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerView.adapter = adatper
 
 //        adatper.addHeaderView(layout(R.layout.test_header, recyclerView, false))

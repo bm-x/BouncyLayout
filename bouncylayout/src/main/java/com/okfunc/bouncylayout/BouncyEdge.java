@@ -115,11 +115,9 @@ public class BouncyEdge {
         int footerVisibale = getFooterVisibleLength();
 
         if (headerVisibale > 0) {
-            mScroller.springBack(0, 0, 0, 0, headerVisibale, headerVisibale);
-            mBouncyLayout.postOnAnimation(mScrollUpdate);
+            startScroll(headerVisibale, mConfig.scrollDuration);
         } else if (footerVisibale > 0) {
-            mScroller.springBack(0, 0, 0, 0, -footerVisibale, -footerVisibale);
-            mBouncyLayout.postOnAnimation(mScrollUpdate);
+            startScroll(-footerVisibale, mConfig.scrollDuration);
         }
     }
 
