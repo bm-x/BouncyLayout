@@ -7,7 +7,7 @@ import android.util.DisplayMetrics;
 public class BouncyConfig {
     public static final int DEFAULT_SCROLL_DURATION = 900;
     public static final int DEFAULT_GAP_HEIGHT = 800;
-    public static final int DEFAULT_GAP_LIMIT = 220;
+    public static final int DEFAULT_GAP_LIMIT = 300;
 
     public int scrollDuration;
     public int gapHeight;

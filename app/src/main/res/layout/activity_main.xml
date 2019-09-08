@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,21 +13,93 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:background="#FFE6E6"-->
-<!--            android:orientation="vertical">-->
+        <com.okfunc.bouncylayout.BouncyMatchParentLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
 
-<!--        </LinearLayout>-->
+            <LinearLayout
+                android:id="@+id/aaa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#B3C53D"
+                android:orientation="vertical">
 
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:gravity="center"-->
-<!--            android:padding="12dp"-->
-<!--            android:text="as asdasd " />-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#6D0EFF"
+                    android:gravity="center"
+                    android:padding="50dp"
+                    android:text="as asdasd "
+                    android:textColor="@color/white" />
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FF0A8E"
+                    android:gravity="center"
+                    android:padding="50dp"
+                    android:text="as asdasd "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#6D0EFF"
+                    android:gravity="center"
+                    android:padding="50dp"
+                    android:text="as asdasd "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FF0A8E"
+                    android:gravity="center"
+                    android:padding="50dp"
+                    android:text="as asdasd "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#6D0EFF"
+                    android:gravity="center"
+                    android:padding="50dp"
+                    android:text="as asdasd "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FF0A8E"
+                    android:gravity="center"
+                    android:padding="50dp"
+                    android:text="as asdasd "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#6D0EFF"
+                    android:gravity="center"
+                    android:padding="50dp"
+                    android:text="as asdasd "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FF0A8E"
+                    android:gravity="center"
+                    android:padding="50dp"
+                    android:text="as asdasd "
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </com.okfunc.bouncylayout.BouncyMatchParentLayout>
     </com.okfunc.bouncylayout.BouncyLayout>
 
 </LinearLayout>

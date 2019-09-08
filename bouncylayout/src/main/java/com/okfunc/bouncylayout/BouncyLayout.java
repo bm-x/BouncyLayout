@@ -49,6 +49,10 @@ public class BouncyLayout extends RecyclerView {
             setAdapter(new ScrollViewAdapter());
         }
 
+        if (child instanceof BouncyMatchParentLayout) {
+            mMatchParentLayout = (BouncyMatchParentLayout) child;
+        }
+
         if (mOriginalAdapter instanceof ScrollViewAdapter) {
             ScrollViewAdapter adapter = (ScrollViewAdapter) mOriginalAdapter;
             child.setLayoutParams(generateLayoutParams(params));
@@ -59,9 +63,14 @@ public class BouncyLayout extends RecyclerView {
         super.addView(child, params);
     }
 
+    private BouncyMatchParentLayout mMatchParentLayout;
+
     @Override
-    public void addView(View child, int index, ViewGroup.LayoutParams params) {
-        super.addView(child, index, params);
+    protected void onMeasure(int widthSpec, int heightSpec) {
+        if (mMatchParentLayout != null && MeasureSpec.getSize(heightSpec) != 0) {
+            mMatchParentLayout.setMinimumHeight(MeasureSpec.getSize(heightSpec));
+        }
+        super.onMeasure(widthSpec, heightSpec);
     }
 
     @Override

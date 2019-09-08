@@ -23,13 +23,13 @@ class MainActivity : BaseStylesActivity() {
         setContentView(R.layout.activity_main)
 
         // recyclerView.layoutManager = GridLayoutManager(this, 3)
-        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        recyclerView.adapter = adatper
+//        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+//        recyclerView.adapter = adatper
 
 //        adatper.addHeaderView(layout(R.layout.test_header, recyclerView, false))
 //        adatper.addFooterView(layout(R.layout.test_footer, recyclerView, false))
-        adatper.setData(Array(20) { it.toString() })
-        adatper.notifyDataSetChanged()
+//        adatper.setData(Array(20) { it.toString() })
+//        adatper.notifyDataSetChanged()
     }
 }
 
