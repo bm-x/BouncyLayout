@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -11,6 +12,7 @@
     <com.okfunc.bouncylayout.BouncyLayout
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
         android:layout_height="match_parent">
 
         <com.okfunc.bouncylayout.BouncyMatchParentLayout
@@ -26,6 +28,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tv1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#6D0EFF"

@@ -16,6 +16,10 @@ public class ScrollViewAdapter extends RecyclerView.Adapter {
         views.add(view);
     }
 
+    public View[] views() {
+        return views.toArray(new View[]{});
+    }
+
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

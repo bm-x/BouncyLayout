@@ -6,12 +6,15 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
+import com.okfunc.bouncylayout.BouncyLayout
 import com.okfunc.core.base.activity.BaseStylesActivity
 import com.okfunc.core.base.adapter.SuperAdapter
 import com.okfunc.core.base.ext.elazy
 import com.okfunc.core.base.ext.layout
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.view.*
 import java.util.*
 
 class MainActivity : BaseStylesActivity() {
@@ -22,6 +25,10 @@ class MainActivity : BaseStylesActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        recyclerView.content().tv1.text = "------------"
+
+//        findViewById<TextView>(R.id.tv1).setText("--------")
+
         // recyclerView.layoutManager = GridLayoutManager(this, 3)
 //        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 //        recyclerView.adapter = adatper
@@ -31,6 +38,15 @@ class MainActivity : BaseStylesActivity() {
 //        adatper.setData(Array(20) { it.toString() })
 //        adatper.notifyDataSetChanged()
     }
+
+//    override fun <T : View?> findViewById(id: Int): T {
+//        val v = super.findViewById<T>(id)
+//        if (v == null) {
+//            return recyclerView.findView<T>(id)
+//        } else {
+//            return v
+//        }
+//    }
 }
 
 class TestAdapter(ctx: Context) : SuperAdapter<String>(ctx) {

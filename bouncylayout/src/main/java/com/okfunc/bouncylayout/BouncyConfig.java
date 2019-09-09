@@ -15,13 +15,11 @@ public class BouncyConfig {
 
     public BouncyGapLayout createHeaderView(Context context) {
         BouncyGapLayout header = createDefaultGapLayout(context);
-        header.setBackgroundColor(Color.GRAY);
         return header;
     }
 
     public BouncyGapLayout createFooterView(Context context) {
         BouncyGapLayout footer = createDefaultGapLayout(context);
-        footer.setBackgroundColor(Color.GRAY);
         return footer;
     }
 
