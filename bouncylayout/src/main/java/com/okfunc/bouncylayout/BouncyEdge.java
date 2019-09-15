@@ -5,6 +5,7 @@ import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -262,8 +263,8 @@ public class BouncyEdge {
                 final int headerVisible = getHeaderVisibleLength();
                 final int footerVisible = getFooterVisibleLength();
 
-                int visible = (headerVisible > 0) ? headerVisible : footerVisible;
                 float distance = isVertical ? distanceY : distanceX;
+                int visible = (headerVisible >= 0) ? headerVisible : footerVisible;
 
                 if (visible > 0) {
                     if ((visible - distance) < mGapLimitPx) {
