@@ -3,18 +3,16 @@ package com.okfunc.bouncylayout.example
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.TextView
-import com.okfunc.bouncylayout.BouncyLayout
 import com.okfunc.core.base.activity.BaseStylesActivity
 import com.okfunc.core.base.adapter.SuperAdapter
+import com.okfunc.core.base.ext.click
 import com.okfunc.core.base.ext.elazy
-import com.okfunc.core.base.ext.layout
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.view.*
+import org.jetbrains.anko.toast
 import java.util.*
 
 class MainActivity : BaseStylesActivity() {
@@ -25,7 +23,9 @@ class MainActivity : BaseStylesActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        recyclerView.content().tv1.text = "------------"
+        recyclerView.content().tv2.click {
+            toast("123")
+        }
 
 //        findViewById<TextView>(R.id.tv1).setText("--------")
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -12,8 +12,8 @@
     <com.okfunc.bouncylayout.BouncyLayout
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager">
 
         <com.okfunc.bouncylayout.BouncyMatchParentLayout
             android:layout_width="match_parent"
@@ -38,60 +38,7 @@
                     android:textColor="@color/white" />
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#FF0A8E"
-                    android:gravity="center"
-                    android:padding="50dp"
-                    android:text="as asdasd "
-                    android:textColor="@color/white" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#6D0EFF"
-                    android:gravity="center"
-                    android:padding="50dp"
-                    android:text="as asdasd "
-                    android:textColor="@color/white" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#FF0A8E"
-                    android:gravity="center"
-                    android:padding="50dp"
-                    android:text="as asdasd "
-                    android:textColor="@color/white" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#6D0EFF"
-                    android:gravity="center"
-                    android:padding="50dp"
-                    android:text="as asdasd "
-                    android:textColor="@color/white" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#FF0A8E"
-                    android:gravity="center"
-                    android:padding="50dp"
-                    android:text="as asdasd "
-                    android:textColor="@color/white" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#6D0EFF"
-                    android:gravity="center"
-                    android:padding="50dp"
-                    android:text="as asdasd "
-                    android:textColor="@color/white" />
-
-                <TextView
+                    android:id="@+id/tv2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#FF0A8E"

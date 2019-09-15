@@ -8,9 +8,6 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-
 public class BouncyLayout extends RecyclerView {
 
     private BouncyAdapterWrap mBouncyAdapter;
@@ -68,12 +65,19 @@ public class BouncyLayout extends RecyclerView {
 
     private BouncyMatchParentLayout mMatchParentLayout;
 
-    public BouncyMatchParentLayout content() {
-        return mMatchParentLayout;
+    public View content() {
+        if (mOriginalAdapter instanceof ScrollViewAdapter && mOriginalAdapter.getItemCount() > 0) {
+            return ((ScrollViewAdapter) mOriginalAdapter).views.get(0);
+        }
+        return null;
     }
 
     public <T extends View> T findView(int id) {
-        return mMatchParentLayout.findViewById(id);
+        T v = findViewById(id);
+        if (v == null && mOriginalAdapter instanceof ScrollViewAdapter) {
+            v = ((ScrollViewAdapter) mOriginalAdapter).findView(id);
+        }
+        return v;
     }
 
     @Override

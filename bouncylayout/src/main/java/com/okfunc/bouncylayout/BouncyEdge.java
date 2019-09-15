@@ -28,6 +28,7 @@ public class BouncyEdge {
     private boolean handleTouchEvent;
     private boolean inTouchEvent;
     private boolean dontIntecpterScrollerEvent;
+    private boolean selfEvent;
 
     private int lastX = 0;
     private int lastY = 0;
@@ -196,6 +197,9 @@ public class BouncyEdge {
     private final RecyclerView.SimpleOnItemTouchListener mItemTouchListener = new RecyclerView.SimpleOnItemTouchListener() {
         @Override
         public boolean onInterceptTouchEvent(RecyclerView rv, MotionEvent e) {
+            if (selfEvent) {
+                return false;
+            }
             onTouchEvent(rv, e);
 
             handleTouchEvent = isGapViewVisibale();
@@ -219,7 +223,29 @@ public class BouncyEdge {
         }
     };
 
+    private void dispatchClickEvent(MotionEvent e) {
+        selfEvent = true;
+        MotionEvent down = MotionEvent.obtain(e);
+        down.setAction(MotionEvent.ACTION_DOWN);
+        mBouncyLayout.dispatchTouchEvent(down);
+        down.recycle();
+
+        MotionEvent up = MotionEvent.obtain(e);
+        up.setAction(MotionEvent.ACTION_UP);
+        mBouncyLayout.dispatchTouchEvent(up);
+        up.recycle();
+        selfEvent = false;
+    }
+
     private final GestureDetectorCompat mGestureDetector = new GestureDetectorCompat(mContext, new GestureDetector.SimpleOnGestureListener() {
+
+        @Override
+        public boolean onSingleTapUp(MotionEvent e) {
+            if (isGapViewVisibale()) {
+                dispatchClickEvent(e);
+            }
+            return super.onSingleTapUp(e);
+        }
 
         @Override
         public boolean onDown(MotionEvent e) {

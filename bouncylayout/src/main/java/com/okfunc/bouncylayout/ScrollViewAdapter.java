@@ -10,7 +10,7 @@ import java.util.List;
 
 public class ScrollViewAdapter extends RecyclerView.Adapter {
 
-    private List<View> views = new ArrayList<>();
+    List<View> views = new ArrayList<>();
 
     public void addView(View view) {
         views.add(view);
@@ -24,6 +24,16 @@ public class ScrollViewAdapter extends RecyclerView.Adapter {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ScrollHolder(views.get(viewType));
+    }
+
+    public <T extends View> T findView(int id) {
+        for (View view : views) {
+            T v = view.findViewById(id);
+            if (v != null) {
+                return v;
+            }
+        }
+        return null;
     }
 
     @Override
